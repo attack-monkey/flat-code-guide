@@ -77,7 +77,7 @@ Instead...
 
 ```javascript
 
-const cat = thing === anotherThing ? 'charlie' : undefined
+const cat = thing === anotherThing ? 'charlie' : 'bob'
 
 ```
 
