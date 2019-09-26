@@ -11,7 +11,7 @@ Wrap your application with a try / catch and use the die function to throw error
 
 try {
   ...
-  const cat = getCat() || die('no cats returned') // If no cats are returned, make charlie the default
+  const cat = getCat() || die('no cats returned') // If no cats are returned, error out
   ...
 } catch (e) {
   // do some thing with errors
@@ -105,12 +105,15 @@ In saying that - there are times where you will not know a type at run time and 
 
 ```typescript
 
-type Apple = 'gala' | 'fuji';
-const isApple = (input: Apple): boolean => ['gala', 'fuji'].includes(input);
-const mustBeApple = (input: Apple): Apple | void => isApple(input) || die('Input must be a type of apple');
+type Apple = 'gala' | 'fuji'
 
-const fruit = 'gala';
+// With just compilation time check
+const fruit: Apple = 'gala'
 
-mustBeApple(fruit); // Now has compilation-time type of Apple, enforced by run time check.
+// Adding runtime checks
+const isApple = (input: Apple): boolean => ['gala', 'fuji'].includes(input)
+const mustBeApple = (input: Apple): Apple | void => isApple(input) || die('Input must be a type of apple')
+
+const fruit = mustBeApple('gala'); // Now has compilation-time type of Apple, enforced by run time check.
 
 ```

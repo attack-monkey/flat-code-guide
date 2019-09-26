@@ -116,7 +116,7 @@ const b =
 
 ```
 
-This is actually very different to if / else / switch which execute blocks of code conditionally based on coditions.
+This is actually very different to if / else / switch which execute blocks of code conditionally based on conditions.
 This is where things get messy - and what flat tries to avoid.
 
 Since ternaries are used to return one value from many possibilities - it also means we're only using one return statement in a fuction.
@@ -137,12 +137,22 @@ if (thing === anotherThing) doSomething()
 
 Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement, not a block of code.
 
-That's it.
 There should never be a return inside an `if` or `switch`.
 There should never be a mutation inside an `if` or `switch`.
-In fact - you don't need to use `switch` at all!
+In fact - you don't need to use `switch` or `if` at all!
 
-Don't do this, as it mutates a value
+The above could be written with a ternary:
+
+```javascript
+
+void (thing === anotherThing ? doSomething() : undefined)
+
+```
+
+Note the use of `void` above - which is used as an indicator more than anything, to say that the following code  
+is performing a side-effect that returns undefined.
+
+Don't do the following, as it mutates a value
 
 ```javascript
 
@@ -200,7 +210,7 @@ Don't use the following...
 
 #### Rules
 
-- Only use `if`, when calling a function conditonally... instead use ternaries, short-circuits, and semantic functions
+- Only use `if`, when calling a function conditonally (and even then, there are other ways)... instead use ternaries, short-circuits, and semantic functions
 - Don't use `switch` (see above)
 - Don't use `for` (or other imperative looping) - instead use recursive functions and Array.prototype methods
 
