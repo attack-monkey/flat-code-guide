@@ -19,7 +19,7 @@ Flat emphasizes the simplification of logic in code by:
 ... and other neat things.
 
 Flat is just javaScript (or even better with typeScript), but with some rules and principles and rules applied.
-The reult is flat, untangled code.
+The result is flat, untangled code.
 
 Flat takes a fp over oo approach - so you won't see any classes or even prototype inheritance here. 
 
