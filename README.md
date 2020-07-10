@@ -15,16 +15,21 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing mutations
 - Reducing nested logic
 - Reducing the number of returns from functions
+- Organising code into functions and pipes over Object Oriented Hierarchies
 
 ... and other neat things.
 
-Flat is just javaScript (or even better with typeScript), but with some rules and principles and rules applied.
+Flat is javaScript (or even better with typeScript), but with some principles and rules applied.
 The result is flat, untangled code.
 
-Flat takes a fp over oo approach - so you won't see any classes or even prototype inheritance here. 
+For the safest experience, use Typescript which adds type-safety into your code!
+
+The Prelude is a small set of utility functions that work with Typescript specifically and introduce powerful ways to organise your code and make it even safer. 
+
+Flat takes an fp over oo approach - so you won't see any classes or even prototype inheritance here. 
 
 While it takes on fp principles, it doesn't dive anywhere near as deep. 
-Flat is primarily concerned with making flat untangled code.
+Flat is primarily concerned with making flat untangled, well organised and safe code.
 
 So... the principles
 
@@ -70,6 +75,18 @@ If you have functions that return values at different points in the function, th
 Especially when combined with variable mutations and nested logic.  
 Instead use a single `return` and shift your logic to the right of the `return` using ternaries, switch-ternaries, short circuits, etc.
 
+### Organise code into functions and pipes, rather than class / prototype based oo hierarchies.
+
+Instead of classes, objects, and methods, flat emphasises the use of functions and pipes.
+
+```javascript
+const add20 = add(20)
+
+console.log(
+ pipe(10, add20, add20)
+) // 50
+```
+
 ## The Old School
 
 In an ol'school imperative program, you may notice that logic blocks have a lot of code in them - including more logic blocks. It's possible to mutate values and return values at multiple points in that code.
@@ -99,7 +116,7 @@ Flat gets rid of this forking nightmare!
 
 Flat code removes imperative code from logic blocks, so they are free to simply convey logical outcomes.  
 
-This is firstly done by removing most if / else, and switch blocks, and instead using ternaries.  
+This is firstly done by removing most if / else, and switch blocks, and instead using ternaries or conditionals.  
 
 You may have noticed that curly braces indicate a block of code (usually multiple statements of code within) and if / else / switch are no exception.  
 The blocks of code in (if / else / switch )es mean that we have logic (The if / else / switch) part mixing with code blocks (the content that executes within the (if / else / switch)es) so in large programs it's actually really difficult to track down what's even logically happening.
@@ -119,10 +136,6 @@ const b =
 This is actually very different to if / else / switch which execute blocks of code conditionally based on conditions.
 This is where things get messy - and what flat tries to avoid.
 
-## The Middle Way
-
-Jumping to a completely functional language like haskell might be awesome for purity, but doesn't exactly work on the browser. In saying that Elm is functional and designed for the browser - and there are plenty of other projects out there too. Flat however is just javascript / typescript, written with flat principles in mind. It accepts some risk that developers may bend the rules - but hopes that other more enlightened folk may guide the way. It might just breed some better developers along the way.
-
 ## The Rules
 
 Only use `if`, when calling a function conditonally...
@@ -133,11 +146,7 @@ if (thing === anotherThing) doSomething()
 
 ```
 
-Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement.
-
-There should never be a return inside an `if` or `switch`.
-There should never be a mutation inside an `if` or `switch`.
-In fact - you don't need to use `switch` or `if` at all!
+Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement. In other words - steer clear of `if` blocks.
 
 The above could be written with a ternary:
 
@@ -214,12 +223,8 @@ Minimise use the following...
 #### Rules
 
 - Only use `if`, when calling a function conditonally (and even then, there are other ways)... instead use ternaries, short-circuits, and semantic functions
-- Seldom use `switch` (see above)
+- Seldom use `switch`
 - Seldom use `for` (or other imperative looping) - instead use recursive functions and Array.prototype methods
 
-Note - we haven't yet covered
-- short-circuits
-- semantic functions
-- Recursive functions
-- Array.prototype methods
+There's plenty more detail in the pages that follow :)
 
