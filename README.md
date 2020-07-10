@@ -160,8 +160,15 @@ Or using a 'short-circuit' pattern
 
 ```javascript
 
-thing && doSomething()
+thing === anotherThing && doSomething()
 
+```
+
+```
+pipe(
+ thing,
+ match(anotherThing, _ => doSomething())
+)
 ```
 
 Don't do the following, as it mutates a value
@@ -207,7 +214,9 @@ const myFunction = () =>
 
 ```
 
-Minimise use the following...
+Using 
+
+Minimise use of the following...
 
 - switch
 - for (or any other imperative looping. They all use mutation - instead use recursive functions and Array.prototype methods)
