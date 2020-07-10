@@ -15,7 +15,7 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing mutations
 - Reducing nested logic
 - Reducing the number of returns from functions
-- Organising code into functions and pipes over Object Oriented Hierarchies
+- Organising code into functions and pipes over object oriented hierarchies
 
 ... and other neat things.
 
