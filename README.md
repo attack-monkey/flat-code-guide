@@ -119,8 +119,6 @@ const b =
 This is actually very different to if / else / switch which execute blocks of code conditionally based on conditions.
 This is where things get messy - and what flat tries to avoid.
 
-Since ternaries are used to return one value from many possibilities - it also means we're only using one return statement in a fuction.
-
 ## The Middle Way
 
 Jumping to a completely functional language like haskell might be awesome for purity, but doesn't exactly work on the browser. In saying that Elm is functional and designed for the browser - and there are plenty of other projects out there too. Flat however is just javascript / typescript, written with flat principles in mind. It accepts some risk that developers may bend the rules - but hopes that other more enlightened folk may guide the way. It might just breed some better developers along the way.
@@ -135,7 +133,7 @@ if (thing === anotherThing) doSomething()
 
 ```
 
-Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement, not a block of code.
+Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement.
 
 There should never be a return inside an `if` or `switch`.
 There should never be a mutation inside an `if` or `switch`.
@@ -145,12 +143,17 @@ The above could be written with a ternary:
 
 ```javascript
 
-void (thing === anotherThing ? doSomething() : undefined)
+thing === anotherThing ? doSomething() : undefined
 
 ```
 
-Note the use of `void` above - which is used as an indicator more than anything, to say that the following code  
-is performing a side-effect that returns undefined.
+Or using a 'short-circuit' pattern
+
+```javascript
+
+thing && doSomething()
+
+```
 
 Don't do the following, as it mutates a value
 
@@ -195,7 +198,7 @@ const myFunction = () =>
 
 ```
 
-Don't use the following...
+Minimise use the following...
 
 - switch
 - for (or any other imperative looping. They all use mutation - instead use recursive functions and Array.prototype methods)
@@ -211,8 +214,8 @@ Don't use the following...
 #### Rules
 
 - Only use `if`, when calling a function conditonally (and even then, there are other ways)... instead use ternaries, short-circuits, and semantic functions
-- Don't use `switch` (see above)
-- Don't use `for` (or other imperative looping) - instead use recursive functions and Array.prototype methods
+- Seldom use `switch` (see above)
+- Seldom use `for` (or other imperative looping) - instead use recursive functions and Array.prototype methods
 
 Note - we haven't yet covered
 - short-circuits
@@ -220,4 +223,3 @@ Note - we haven't yet covered
 - Recursive functions
 - Array.prototype methods
 
-It's ok for now to know that they are in your arsenal.
