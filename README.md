@@ -269,7 +269,9 @@ const myFunction = () =>
 
 **Don't use more than one return in a function. This breeds blocks of conditional code.**
 
-**Don't use `for` (or any other imperative looping. They all use mutation - instead use recursive functions and Array.prototype methods)**
+**Use `for` with caution (Same goes for any other imperative looping). 
+
+`for` uses mutation, which is something that we try to avoid. The alternative is to use recursive functions and Array.prototype methods). This is a safer, and  cleaner approach than a `for` loop - but if you are processing millions of iterations - `for` is faster. Most of the time though - the recursive option is far better! 
 
 ### Summary
 
