@@ -80,7 +80,7 @@ Instead use a single `return` and shift your logic to the right of the `return` 
 
 Instead of classes, objects, and methods, flat emphasises the use of functions and pipes.
 
-> :hot_pepper: Pipe is a function that you will find in **The Prelude**
+> 🌶️  &nbsp; Pipe is a function that you will find in **The Prelude**
 
 ```javascript
 const add20 = add(20)
