@@ -101,7 +101,7 @@ console.log(
 )
 ```
 
-## The Old School
+## Why Flat
 
 In an ol'school imperative program, you may notice that logic blocks have a lot of code in them - including more logic blocks. It's possible to mutate values and return values at multiple points in that code.
 
@@ -166,7 +166,25 @@ console.log(
 
 ```
 
-## The Rules
+## Why Functions and Pipes
+
+Rather than sticking a method on a class, and then that method only be able to work with objects of that class is not very DRY.
+
+A function that works with any value of the correct type is very DRY.
+
+```typescript
+
+// Note that this example uses typescript
+
+const valueLogger = (a: { value: string }) => console.log(a.value)
+
+```
+
+Pipes simply allow the result of one function to be passed into the next, into the next, etc. in a process known as function composition.
+
+This process is far more flexible and less complicated than dealing with oo, however can take some time to get used to the paradigm shift!
+
+## The Rules of Flat
 
 **Only use `if`, when calling a function conditonally...**
 
