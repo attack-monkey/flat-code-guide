@@ -4,7 +4,7 @@ JS / TS have many ways to control the flow of a program. In readme.md we explain
 
 We've been introduced to some better alternatives including:
 
-- Ternaries
+- [Ternaries](https://github.com/attack-monkey/flat-code-guide/blob/master/Ternaries.md)
 - Short Circuits
 - 🌶️  &nbsp; 🧩 &nbsp; Conditionals ( Utilising **The Prelude** + **Maybe Library** )
 
