@@ -148,7 +148,7 @@ const b =
 This is actually very different to if / else / switch which execute blocks of code conditionally based on conditions.
 This is where things get messy - and what flat tries to avoid.
 
-> 🌶️  &nbsp; The **The Prelude** + **Maybe Library** provides a powerful alternative to `if`, `switch`, and `ternaries`.
+> 🌶️  &nbsp; 🧩 &nbsp; The **The Prelude** + **Maybe Library** provides a powerful alternative to `if`, `switch`, and `ternaries`.
 >
 > Example...
 
@@ -196,7 +196,7 @@ thing === anotherThing && doSomething()
 
 ```
 
-Or using a Conditional from the **Maybe Library**
+🧩 &nbsp; Or using a Conditional from the **Maybe Library**
 
 ```
 pipe(
