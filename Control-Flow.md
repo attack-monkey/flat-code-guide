@@ -5,7 +5,7 @@ JS / TS have many ways to control the flow of a program. In readme.md we explain
 We've been introduced to some better alternatives including:
 
 - [Ternaries](https://github.com/attack-monkey/flat-code-guide/blob/master/Ternaries.md)
-- Short Circuits
+- [Short Circuits](https://github.com/attack-monkey/flat-code-guide/blob/master/Short%20Circuits.md)
 - 🌶️  &nbsp; 🧩 &nbsp; Conditionals ( Utilising **The Prelude** + **Maybe Library** )
 
 So what's the difference between them and which should you use?
