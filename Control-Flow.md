@@ -6,6 +6,33 @@ We've been introduced to some better alternatives including:
 
 - Ternaries
 - Short Circuits
-- Conditionals ( Utilising **The Prelude** + **Maybe Library** )
+- 🌶️  &nbsp; 🧩 &nbsp; Conditionals ( Utilising **The Prelude** + **Maybe Library** )
+
+So what's the difference between them and which should you use?
+
+Ternaries and Short Circuits are native and require nothing to get started - however Conditionals are often cleaner and more powerful.
+
+So for simple logic, use ternaries...
+
+```
+
+const a = 10
+
+const b =
+  a === 10
+    ? 'exactly 10'
+    : a < 10
+      ? 'less than 10'
+      : 'greater than 10'
+```
+
+Where ternaries are good for logic that of `return a if x or b if y`, short-circuits are best for guards and checks.
+
+```
+const a = 10
+
+a === 10 || die(`a cannot be 10`)
+
+```
 
 
