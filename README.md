@@ -287,7 +287,7 @@ const myFunction = () =>
 - **Don't mutate anything in an `if` or a `switch`**
 - **As soon as you use a return statement in an if or switch block, you should refactor...**
 - **Don't use more than one return in a function. This breeds blocks of conditional code.**
-- **Don't use `for` (or any other imperative looping. They all use mutation - instead use recursive functions and Array.prototype methods)**
+- **Use `for` with caution (Same goes for any other imperative looping)**
 
 There's plenty more detail in the pages that follow :)
 
