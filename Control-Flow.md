@@ -14,7 +14,7 @@ Ternaries and Short Circuits are native and require nothing to get started - how
 
 So for simple logic, use ternaries...
 
-```
+```javascript
 
 const a = 10
 
@@ -26,13 +26,35 @@ const b =
       : 'greater than 10'
 ```
 
-Where ternaries are good for logic that of `return a if x or b if y`, short-circuits are best for guards and checks.
+Where ternaries are good for logic that of `return a if x or b if y`, short-circuits are great for things like setting default values...
+
+```javascript
+
+const a = 'garfield'
+const b = undefined
+
+const catMaker = cat => cat || 'default cat'
+
+catMaker(a) // garfield
+catMaker(b) // default cat
 
 ```
-const a = 10
 
-a === 10 || die(`a cannot be 10`)
+Conditionals use scenarios, whereby a function fires when a given scenario is matched. Only the first scenario fires in a given pipe.
+Conditionals are often cleaner than ternaries - but require more processing since they are not native.
 
+```javascript
+
+const person = {
+  name: {
+    first: 'Johnny',
+    last: 'Bravo'
+  }
+}
+
+pipe(
+  person,
+  match({ name: first: 'Johnny' }, ({ name: { first: a }}) => `hello ${a}`),
+  otherwise(_ => `not johnny`)
+)
 ```
-
-
