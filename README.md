@@ -289,5 +289,5 @@ const myFunction = () =>
 - **Don't use more than one return in a function. This breeds blocks of conditional code.**
 - **Use `for` with caution (Same goes for any other imperative looping)**
 
-There's plenty more detail in the pages that follow :)
+(Next: Control-Flow)[https://github.com/attack-monkey/flat-code-guide/blob/master/Control-Flow.md]
 
