@@ -40,7 +40,7 @@ catMaker(b) // default cat
 
 ```
 
-Conditionals use scenarios, whereby a function fires when a given scenario is matched. Only the first scenario fires in a given pipe.
+Conditionals use scenarios. When a given scenario is matched, the corresponding function fires. Only the first scenario fires in a given pipe.
 Conditionals are often cleaner than ternaries - but require more processing since they are not native.
 
 ```javascript
