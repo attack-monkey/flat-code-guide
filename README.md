@@ -25,7 +25,7 @@ The result is flat, untangled code.
 For the safest experience, use Typescript which adds type-safety into your code!
 
 
-:hot_pepper: - **The Prelude** is a small set of utility functions that work with Typescript specifically and introduce powerful ways to organise your code and make it even safer. 
+:hot_pepper: &nbsp; **The Prelude** is a small set of utility functions that work with Typescript specifically and introduce powerful ways to organise your code and make it even safer. 
 
 Flat takes an fp over oo approach - so you won't see any classes or even prototype inheritance here. 
 
