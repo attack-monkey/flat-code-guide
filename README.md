@@ -168,7 +168,8 @@ console.log(
 
 ## Why Functions and Pipes
 
-Rather than sticking a method on a class, and then that method only be able to work with objects of that class is not very DRY.
+Writing a method for a class, and then that method only be able to work with objects of that class is not very DRY.
+Yeah you can use DI patterns to connect methods from one class into another - but all of this comes with an overload of complexity.
 
 A function that works with any value of the correct type is very DRY.
 
@@ -182,7 +183,7 @@ const valueLogger = (a: { value: string }) => console.log(a.value)
 
 Pipes simply allow the result of one function to be passed into the next, into the next, etc. in a process known as function composition.
 
-This process is far more flexible and less complicated than dealing with oo, however can take some time to get used to the paradigm shift!
+This process is far more flexible and less complicated than dealing with oo, ( however can take some time to get used to the paradigm shift! ).
 
 ## The Rules of Flat
 
