@@ -80,7 +80,7 @@ Instead use a single `return` and shift your logic to the right of the `return` 
 
 Instead of classes, objects, and methods, flat emphasises the use of functions and pipes.
 
-> 🌶️  &nbsp; Pipe is a function that you will find in **The Prelude**
+> 🌶️  &nbsp; pipe is a function found in **The Prelude** - but code can be written without it.
 
 ```javascript
 const add20 = add(20)
@@ -88,6 +88,16 @@ const add20 = add(20)
 console.log(
  pipe(10, add20, add20)
 ) // 50
+
+// Is the same as 
+
+console.log(
+ add20(
+  add20(
+   10
+  )
+ )
+)
 ```
 
 ## The Old School
