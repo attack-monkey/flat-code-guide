@@ -24,7 +24,7 @@ The result is flat, untangled code.
 
 For the safest experience, use Typescript which adds type-safety into your code!
 
-The Prelude is a small set of utility functions that work with Typescript specifically and introduce powerful ways to organise your code and make it even safer. 
+🌶️  **The Prelude** is a small set of utility functions that work with Typescript specifically and introduce powerful ways to organise your code and make it even safer. 
 
 Flat takes an fp over oo approach - so you won't see any classes or even prototype inheritance here. 
 
@@ -78,6 +78,8 @@ Instead use a single `return` and shift your logic to the right of the `return` 
 ### Organise code into functions and pipes, rather than class / prototype based oo hierarchies.
 
 Instead of classes, objects, and methods, flat emphasises the use of functions and pipes.
+
+> 🌶️  Pipe is a function that you will find in **The Prelude**
 
 ```javascript
 const add20 = add(20)
