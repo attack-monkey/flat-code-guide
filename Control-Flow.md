@@ -70,4 +70,4 @@ pipe(
 )
 ```
 
-[Next: `const`, `let`, `freeze`, and `deRef`-ing](https://github.com/attack-monkey/flat-code-guide/blob/master/const%2C%20let%2C%20Readonly%2C%20freeze%20and%20deRef-ing.md)
+## [Next: `const`, `let`, `freeze`, and `deRef`-ing](https://github.com/attack-monkey/flat-code-guide/blob/master/const%2C%20let%2C%20Readonly%2C%20freeze%20and%20deRef-ing.md)
