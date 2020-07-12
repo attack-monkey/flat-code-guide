@@ -52,17 +52,18 @@ In javascript something is falsy if evaluates to
 
 Otherwise it's truthy. Problems can arise when delaing with numbers and expecting 0 to be truthy, as well as dealing with strings and expecting an empty string to still be truthy.
 
-To get around this, create a function called `existy`.
+🌶️  &nbsp; To get around this, use the `isSome` and `isNone` functions from **The Prelude**
 
-## Existy
+## `isSome` and `isNone`
 
-`existy` only returns true if something is not undefined or null. 0, empty strings, etc. all return true - since they exist.
+`isSome` only returns true if something is not undefined or null. 0, empty strings, etc. all return true - since they exist.
 
 ```javascript
 
-const existy =
-  input =>
-    input !== undefined
-      && input !== null
+const a = 0
+
+console.log(isSome(a)) // true
+console.log(isSome(undefined)) // false
+console.log(isNone(undefined)) // true
 
 ```
