@@ -25,7 +25,7 @@ updatable.name.first = 'not bob'
 
 ```
 
-To lock down an object, use the `freeze` function which makes all the properties in an object readonly.
+🌶️ &nbsp; To lock down an object, use the `freeze` function (from **The Prelude**) which makes all the properties in an object readonly.
 
 To make a full object immutable, freeze also needs to be applied to any arrays or objects within.
 
@@ -71,6 +71,8 @@ While `freeze` protects against any mutation, there are still times where you'll
 so you can mutate it.
 
 In Flat this is done by dereferenceing an object when you assign it to another variable...
+
+> 🌶️ &nbsp; `deRef` is found in **The Prelude**
 
 ```
 const obj3: MutCat = deRef(obj2) We have made obj3 mutable and deRef'd it, as to not mutate obj1 or obj2
