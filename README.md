@@ -76,7 +76,9 @@ Flat organises code into functions, and functions into libraries (libs).
 
 > :hot_pepper: &nbsp;You'll find `pipe` in **The Prelude**
 
-```javascript
+```typescript
+
+// Note that this is using typescript syntax
 
 // functions
 const upper = (str: string) => str.toUpperCase()
@@ -142,7 +144,9 @@ pipe('cat', myPipe, anotherPipe)
 
 ```
 
-## Don't use `if`
+A given function can be used by any value that conforms to function's call signature. For example `upper` and `lower` from the above example are usable by any strings. This is different to a method that only works on objects created from a given class.
+ 
+## How not to use `if`
 
 Take the following example:
 
