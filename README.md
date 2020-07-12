@@ -15,26 +15,20 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing mutations
 - Reducing nested logic
 - Reducing the number of returns from functions
-- Organising code into functions and pipes over object oriented hierarchies
+- Organising code into functions and pipes instead of object oriented hierarchies
 
-... and other neat things.
-
-Flat is javascript (or even better with typescript), but with some principles, rules, and extensions applied.
+Flat is javascript (or even better with typescript), but with some principles, and rules applied.
 The result is flat, untangled code.
 
-For the best and safest experience
-
+**For the best and safest experience:**
 - use Typescript which adds type-safety into your code!
-- :hot_pepper: &nbsp; 🧩 &nbsp; Use **The Prelude**; a small set of utility functions that introduce powerful ways to organise your code and make it even safer. Many of Flat's principles don't require this or any other library, but Flat becomes a much richer experience with it. Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
+- Use **The Prelude**; a small set of utility functions that introduce powerful ways to organise your code and make it even safer. Many of Flat's principles don't require this or any other library, but Flat becomes a much richer experience with it. Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
 
-Flat takes an fp over oo approach - so you won't see any classes or even prototype inheritance here. 
+Flat takes an fp (functional programming) over oo (object oriented) approach - so you won't see any classes or even prototype inheritance here. 
+Instead code is organised into functions and pipes.
 
-While it takes on fp principles, it doesn't dive anywhere near as deep. 
+While Flat takes on fp principles, it doesn't dive anywhere near as deep. 
 Flat is primarily concerned with making flat untangled, well organised and safe code.
-
-So... the principles
-
-## Principles
 
 ### Reducing mutations
 
@@ -78,114 +72,77 @@ Instead use a single `return` and shift your logic to the right of the `return` 
 
 ### Organise code into functions and pipes, rather than class / prototype based oo hierarchies.
 
-Instead of classes, objects, and methods, flat emphasises the use of functions and pipes.
-Pipes allow a value to be passed into a series of functions. The result of passing the value into the first function is the passed to the next and so on.
+Flat organises code into functions, and functions into libraries (libs).
 
-> 🌶️  &nbsp; pipe is a function found in **The Prelude** - but code can be written without it.
+> :hot_pepper: &nbsp;You'll find `pipe` in **The Prelude**
 
 ```javascript
-const add20 = add(20)
 
-console.log(
- pipe(10, add20, add20)
-) // 50
+// functions
+const upper = (str: string) => str.toUpperCase()
+const lower = (str: string) => str.toLowerCase()
 
-// Is the same as 
+// String_ lib
+const String_ = {
+  upper,
+  lower
+}
 
-console.log(
- add20(
-  add20(
-   10
+```
+
+Programs are built by using `pipe` to pass a value through a series of functions.
+
+```javascript
+
+pipe('cat', String_.upper, String_.lower)
+
+```
+
+or
+
+```javascript
+
+import { lower, upper } from '...'
+
+pipe('cat', upper, lower)
+
+```
+
+Which is no different than...
+
+```javascript
+
+String_.lower(
+  String_.upper(
+    'cat'
   )
- )
-)
-```
-
-## Why Flat
-
-In an ol'school imperative program, you may notice that logic blocks have a lot of code in them - including more logic blocks. It's possible to mutate values and return values at multiple points in that code.
-
-Let's play this out...
-
-Each time you use an if-else (logic blocks) you create forks where blocks of code run when they meet specific conditions.  
-When you use a logic-block inside another, that's another fork.
-
-```
-                x - starting block
-              /   \
-             if(i) else (e)    
-           / | \    | \
-          i  e  e   i  e
-        / | / \/ \ / \/ 
-       i  ei  ei  ei ei    - Oh!
-```
-
-Each of those forks are capable of mutating variables, not just in their immediate scope - but also outer scope
-
-They can call functions, which implement there own spaghetti logic.
-Those functions can even mutate the same outer-scope variables as before.
-A function can also return values from any of it's forks.
-
-Flat gets rid of this forking nightmare!
-
-This is firstly done by removing if / else, and switch blocks, and instead using ternaries, short-circuits, and conditionals.
-
-You may have noticed that curly braces indicate a block of code (usually multiple statements of code within) and if / else / switch are no exception.  
-The blocks of code in (if / else / switch )es mean that we have logic (The if / else / switch) part mixing with code blocks (the content that executes within the (if / else / switch)es) so in large programs it's actually really difficult to track down what's even logically happening.
-
-By using ternaries instead of if / else / switch to manage logic - this forces developers to not mix large code blocks into their logic.
-
-Ternaries are used to return one value from many possibilities based on coditions.
-
-```javascript
-const b =
-  a === 1
-    ? 'a equals one'
-    : 'a does not equal one'
-
-```
-
-This is actually very different to if / else / switch which execute blocks of code conditionally based on conditions.
-This is where things get messy - and what flat tries to avoid.
-
-> 🌶️  &nbsp; 🧩 &nbsp; The **The Prelude** + **Maybe Library** provides a powerful alternative to `if`, `switch`, and `ternaries`.
->
-> Example...
-
-```javascript
-
-console.log(
- pipe(
-  unknownAnimal,
-  match('garfield', a => `${a} is a cat`),
-  match('odie', a => `${a} is a dog`),
-  some(a => `${a} has some value - just not odie or garfield`,
-  none(_ => `no value`)
- )
 )
 
 ```
 
-## Why Functions and Pipes
+... but visualises things as a pipeline rather a nested set of functions.
 
-Writing a method for a class, and then that method only be able to work with objects of that class is not very DRY.
-Yeah you can use DI patterns to connect methods from one class into another - but all of this comes with an overload of complexity.
+Pipes can be composed...
 
-A function that works with any value of the correct type is very DRY.
+```javascript
 
-```typescript
-
-// Note that this example uses typescript
-
-const valueLogger = (a: { value: string }) => console.log(a.value)
+const myPipe = compose(String_.upper, String_.lower)
 
 ```
 
-Pipes simply allow the result of one function to be passed into the next, into the next, etc. in a process known as function composition.
+and then have values piped through them.
 
-This process is far more flexible and less complicated than dealing with oo, ( however can take some time to get used to the paradigm shift! ).
+```javascript
 
-## The Rules of Flat
+myPipe('cat')
+
+// or
+
+pipe('cat', myPipe, anotherPipe)
+
+```
+
+## Don't use `if`
 
 **Only use `if`, when calling a function conditonally...**
 
@@ -224,70 +181,30 @@ pipe(
 )
 ```
 
-**Don't mutate anything in an `if` or a `switch`**
+## Banned keywords and macros
 
-```javascript
+There are a lot of constructs in javascript, which are deemed unsafe in flat. The following keywords are forbidden because they work against the intention of flat...
 
-let cat = 'bob'
-if (thing === anotherThing) cat = 'charlie'
+- `if`
+- `switch`
+- `for`
+- `var`
+- `while`
+- `class`
+- `new`
+- `this`
 
-```
-
-Instead...
-
-```javascript
-
-const cat =
-  thing === anotherThing 
-    ? 'charlie' 
-    : 'bob'
+Forbidden keywords can be outside of the core application, and called by the core application.
+Unsafe code in flat are referred to as macros.
 
 ```
 
-**As soon as you use a return statement in an if or switch block, you should refactor...**
-
-```javascript
-
-const myFunction = () => {
-  if (a === b) {
-    return 10
-  }
-}
+- macros
+ ( unsafe code lives here )
+- src
+ ( safe code lives here )
 
 ```
-
-to something more like...
-
-```javascript
-
-const myFunction = () => 
-  a === b
-    ? 10
-    : undefined
-
-```
-
-**Don't use more than one return in a function. This breeds blocks of conditional code.**
-
-**Use `for` with caution (Same goes for any other imperative looping). 
-
-`for` uses mutation, which is something that we try to avoid. The alternative is to use recursive functions and Array.prototype methods). This is a safer, and  cleaner approach than a `for` loop - but if you are processing millions of iterations - `for` is faster. Most of the time though - the recursive option is far better! 
-
-### Summary
-
-#### Principles
-
-- Reduce mutations - by using immutable operations
-- Reduce nested logic - by normalising and abstracting logic
-- Reduce the number of returns from functions - by using ternaries, short-circuits, and piping through functions
-
-#### Rules
-
-- **Only use `if`, when calling a function conditonally...**
-- **Don't mutate anything in an `if` or a `switch`**
-- **As soon as you use a return statement in an if or switch block, you should refactor...**
-- **Don't use more than one return in a function. This breeds blocks of conditional code.**
-- **Use `for` with caution (Same goes for any other imperative looping)**
 
 ## [Next: Control-Flow](https://github.com/attack-monkey/flat-code-guide/blob/master/Control-Flow.md)
 
