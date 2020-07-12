@@ -103,17 +103,4 @@ If you're using Typescript or another javascript compiler with static type suppo
 
 In saying that - there are times where you will not know a type at run time and the above dynamic type checking is still very important.
 
-```typescript
-
-type Apple = 'gala' | 'fuji'
-
-// With just compilation time check
-const fruit: Apple = 'gala'
-
-// Adding runtime checks
-const isApple = (input: Apple): boolean => ['gala', 'fuji'].includes(input)
-const mustBeApple = (input: Apple): Apple | void => isApple(input) || die('Input must be a type of apple')
-
-const fruit = mustBeApple('gala'); // Now has compilation-time type of Apple, enforced by run time check.
-
-```
+// TODO: Next --> Runtime Interfaces and Contracts
