@@ -45,7 +45,7 @@ Short-circuits are also good for guards
 
 ```javascript
 
-const a = getValue() || die('No value to get') // :hot_chilli:
+const a = getValue() || die('No value to get') // :hot_chillie:
 
 ```
 
