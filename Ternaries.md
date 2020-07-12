@@ -118,4 +118,6 @@ return (
 
 ```
 
-Note that switch ternaries can leak an extra nesting of logic, but they also help to simplify the visuals. Use wisely.
+Note that switch ternaries can leak an extra nesting of logic, but they also help to simplify the visuals.
+
+🌶️  &nbsp; 🧩  &nbsp; If you are at the stage of using Switch Tenraries, consider using Conditionals from **The Prelude** + **Maybe Library**
