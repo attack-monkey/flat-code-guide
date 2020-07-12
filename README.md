@@ -146,7 +146,7 @@ pipe('cat', myPipe, anotherPipe)
 
 A given function can be used by any value that conforms to function's call signature. For example `upper` and `lower` from the above example are usable by any strings. This is different to a method that only works on objects created from a given class.
  
-## How not to use `if`
+## Alternatives to `if`
 
 Take the following example:
 
