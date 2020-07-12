@@ -144,17 +144,12 @@ pipe('cat', myPipe, anotherPipe)
 
 ## Don't use `if`
 
-**Only use `if`, when calling a function conditonally...**
+Take the following example:
 
 ```javascript
 
 if (thing === anotherThing) doSomething()
 
-```
-
-Notice how the if doesn't have curly braces... this indicates that what follows is just a single statement.
-It can be used to fire off a side-effect such as logging to the console.
-It shouldn't be used to mutate something.
 
 The above can be written with a ternary:
 
