@@ -45,7 +45,7 @@ Short-circuits are also good for guards
 
 ```javascript
 
-const a = getValue() || die('No value to get') // 🌶️  &nbsp; die is used to throw an error.
+const a = getValue() || die('No value to get') // 🌶️  &nbsp; die is found in The Prelude and is used to throw an error.
 
 ```
 
