@@ -60,15 +60,32 @@ Instead use immutable operations like the ones above, that generate a new state 
 
 ### Reducing Nested Logic
 
+
+Nesting logic is when you put a logic block inside of another logic block. For example an `if` inisde another `if` or a `switch` inside an `if` etc.
 Each time you nest some logic, you are tangling code that little bit more.  
 It makes code difficult to trace, and notoriously difficult to refactor.  
 Instead keep logic flat or 'normalised'.
+
+By moving to immutable patterns ...
+
+```javascript
+
+const a = ...
+const b = ...
+const c = ... ? ... : ...
+
+```
+
+... and putting code blocks inside reusable functions, nested logic will be a thing of the past.
 
 ### Reducing the number of returns from functions
 
 If you have functions that return values at different points in the function, then code becomes hard to trace.  
 Especially when combined with variable mutations and nested logic.  
 Instead use a single `return` and shift your logic to the right of the `return` using ternaries, switch-ternaries, short circuits, etc.
+
+> multiple `return` statements are a symptom of imperative logic blocks like `if` and `switch`, which are 'banned keywords' in flat.
+> If your project already has them - well unless you refactor, theres not much you can do, but don't introduce more.
 
 ### Organise code into functions and pipes, rather than class / prototype based oo hierarchies.
 
@@ -146,41 +163,7 @@ pipe('cat', myPipe, anotherPipe)
 
 A given function can be used by any value that conforms to function's call signature. For example `upper` and `lower` from the above example are usable by any strings. This is different to a method that only works on objects created from a given class.
  
-## Alternatives to `if`
-
-Take the following example:
-
-```javascript
-
-if (thing === anotherThing) doSomething()
-
-
-The above can be written with a ternary:
-
-```javascript
-
-thing === anotherThing ? doSomething() : undefined
-
-```
-
-Or using a 'short-circuit' pattern
-
-```javascript
-
-thing === anotherThing && doSomething()
-
-```
-
-🧩 &nbsp; Or using a Conditional from the **Maybe Library**
-
-```
-pipe(
- thing,
- match(anotherThing, _ => doSomething())
-)
-```
-
-## Banned keywords and macros
+## Banned keywords
 
 There are a lot of constructs in javascript, which are deemed unsafe in flat. The following keywords are forbidden because they work against the intention of flat...
 
@@ -193,17 +176,7 @@ There are a lot of constructs in javascript, which are deemed unsafe in flat. Th
 - `new`
 - `this`
 
-Forbidden keywords can be outside of the core application, and called by the core application.
-Unsafe code in flat are referred to as macros.
-
-```
-
-- macros
- ( unsafe code lives here )
-- src
- ( safe code lives here )
-
-```
+> If your project already has banned keywords - well unless you refactor, theres not much you can do, but don't introduce more.
 
 ## [Next: Control-Flow](https://github.com/attack-monkey/flat-code-guide/blob/master/Control-Flow.md)
 
