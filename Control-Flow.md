@@ -1,8 +1,8 @@
 # Control Flow
 
-JS / TS have many ways to control the flow of a program. In readme.md we explained why `if`, `switch`, and imperative loops like `for` are poor ways to control flow and in flat have been designated as banned keywords - only for use in macros.
+JS / TS have many ways to control the flow of a program. In readme.md we explained why `if`, `switch`, and imperative loops like `for` are poor ways to control flow and in flat have been designated as banned keywords.
 
-In place of imperative Control Flow, the following are better alternatives:
+In place of imperative Control Flow, are the following declarative alternatives:
 
 - [Ternaries](https://github.com/attack-monkey/flat-code-guide/blob/master/Ternaries.md)
 - [Short Circuits](https://github.com/attack-monkey/flat-code-guide/blob/master/Short%20Circuits.md)
