@@ -76,7 +76,9 @@ const c = ... ? ... : ...
 
 ```
 
-... and putting code blocks inside reusable functions, nested logic will be a thing of the past.
+... and putting code blocks inside reusable functions, then you will find that nested logic no longer becomes a problem.
+
+Welcome to flat coding :)
 
 ### Reducing the number of returns from functions
 
