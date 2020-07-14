@@ -76,3 +76,5 @@ pipe({ value: 'garfield' }, MyLib.says)
 ```
 
 Libs are purely an organisational thing. If you plan on using a number of methods from the same Lib - then it might make sense to just use one import.
+
+## [Next: Pipable Functions](https://github.com/attack-monkey/flat-code-guide/blob/master/pipable%20functions.md)
