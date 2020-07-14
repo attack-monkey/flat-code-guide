@@ -42,7 +42,9 @@ The other reason for using data-only objects is that code in Flat is organised i
 
 **function**
 
-```javascript
+```typescript
+
+// typescript
 
 const says = (a: { value: string }) => console.log('meow')
 
