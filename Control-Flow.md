@@ -52,7 +52,7 @@ const a = getValue() || die('No value to get') // 🌶️  &nbsp; die is found i
 Conditionals use scenarios. When a given scenario is matched, the corresponding function fires. Only the first scenario fires in a given pipe.
 Conditionals are often cleaner than ternaries - but require more processing since they are not native.
 
-In this example, it's easy to match an object against another object. Note that the object doesn't have to be completely the same - just that all the parts that it does have, match that of the original object.
+In this example, it's easy to match an object against another object. Note that the object doesn't have to be completely the same - just that all the parts that it does have, match that of the original object. This is known as a pattern match.
 
 ```javascript
 
