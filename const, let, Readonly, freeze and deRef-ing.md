@@ -108,3 +108,5 @@ And while freeze is great at locking things down, it can be overkill - and is by
 issues just go away.
 
 So `const`, `freeze`, and `deRef` are all extremely important tools in safe fast typescript but there is no substitute for immutable patterns!
+
+## [Data-only objects, functions, pipes, and libs](https://github.com/attack-monkey/flat-code-guide/blob/master/Data-only%20objects%2C%20functions%2C%20pipes%2C%20and%20libs.md)
