@@ -1,4 +1,4 @@
-#File Structure
+# File Structure
 
 When writing a flat app, the common approach is to have a file structure that looks something like:
 
