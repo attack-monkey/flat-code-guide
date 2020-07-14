@@ -1,6 +1,6 @@
 # Control Flow
 
-JS / TS have many ways to control the flow of a program. In readme.md we explained why `if`, `switch`, and imperative loops like `for` are poor ways to control flow and in flat have been designated as banned keywords.
+JS / TS have many ways to control the flow of a program. In readme.md we explained why `if`, `switch`, and imperative loops like `for` are poor ways to control flow and in flat have been designated as Unsafe keywords.
 
 In place of imperative Control Flow, are the following declarative alternatives:
 
