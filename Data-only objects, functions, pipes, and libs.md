@@ -52,6 +52,8 @@ const says = (a: { value: string }) => console.log('meow')
 
 **pipe**
 
+> 🌶️  &nbsp; `pipe` is found in **The Prelude**
+
 ```javascript
 
 pipe({ value: 'cat' }, says)
