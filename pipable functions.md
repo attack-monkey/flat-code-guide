@@ -55,4 +55,4 @@ pipe(100, add(10), add(20), logInDev_(`Here's my number`)) // Only logs in dev
 
 ```
 
-[Next: File Structure](https://github.com/attack-monkey/flat-code-guide/blob/master/File%20Structure.md)
+## [Next: File Structure](https://github.com/attack-monkey/flat-code-guide/blob/master/File%20Structure.md)
