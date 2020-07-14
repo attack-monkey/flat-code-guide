@@ -1,6 +1,6 @@
 # const, let Readonly, freeze, and deRef-ing
 
-> ⚠️ &nbsp; A lot of the code samples in this doc are typescript
+> ⚠️ &nbsp; A lot of the code samples in this doc are written in Typescript
 
 In Flat we use `const` a lot.
 `const` makes a variable non-reassignable.
