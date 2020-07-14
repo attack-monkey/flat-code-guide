@@ -15,7 +15,10 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing mutations
 - Reducing nested logic
 - Reducing the number of returns from functions
-- Organising code into functions and pipes instead of object oriented hierarchies
+
+Advanced Flat also:
+
+- Organises code into functions and pipes instead of object oriented hierarchies
 
 Flat is javascript (or even better with typescript), but with some principles, and rules applied.
 The result is flat, untangled code.
@@ -86,12 +89,12 @@ If you have functions that return values at different points in the function, th
 Especially when combined with variable mutations and nested logic.  
 Instead use a single `return` and shift your logic to the right of the `return` using ternaries, switch-ternaries, short circuits, etc.
 
-> multiple `return` statements are a symptom of imperative logic blocks like `if` and `switch`, which are 'banned keywords' in flat.
-> If your project already has them - well unless you refactor, theres not much you can do, but don't introduce more.
+> multiple `return` statements are a symptom of imperative logic blocks like `if` and `switch`, which are 'Unsafe keywords' in flat.
+> If your project already has them, theres not much you can do (unless you refactor), but don't introduce more.
 
 ### Organise code into functions and pipes, rather than class / prototype based oo hierarchies.
 
-Flat organises code into functions, and functions into libraries (libs).
+Advanced Flat organises code into functions, and functions into libraries (libs).
 
 > :hot_pepper: &nbsp;You'll find `pipe` in **The Prelude**
 
@@ -165,18 +168,18 @@ pipe('cat', myPipe, anotherPipe)
 
 A given function can be used by any value that conforms to function's call signature. For example `upper` and `lower` from the above example are usable by any strings. This is different to a method that only works on objects created from a given class.
  
-## Banned keywords
+## Unsafe keywords
 
-There are a lot of constructs in javascript, which are deemed unsafe in flat. The following keywords are forbidden because they work against the intention of flat...
+There are a lot of constructs in javascript, which are deemed unsafe in flat. The following keywords are considered unsafe because they work against the intention of flat...
 
-- `if`
-- `switch`
-- `for`
-- `var`
-- `while`
-- `class`
-- `new`
-- `this`
+- `if` - encourages mutation and multiple returns
+- `switch` - encourages mutation and multiple returns
+- `for` - causes mutation and multiple returns
+- `var` - Is a higher scoped varient of `let` which is no longer needed.
+- `while` - Causes mutation and multiple returns
+- `class` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
+- `new` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
+- `this` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
 
 > If your project already has banned keywords - well unless you refactor, theres not much you can do, but don't introduce more.
 
