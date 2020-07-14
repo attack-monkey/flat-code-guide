@@ -8,8 +8,6 @@
 
 ```
 
--------------------------------------------------------------
-
 Welcome to flat.  
 Flat emphasizes the simplification of logic in code by:
 
