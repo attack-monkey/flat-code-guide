@@ -16,6 +16,8 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing nested logic
 - Reducing the number of returns from functions
 
+Simple Flat is really a set of principles, and doesn't require any additional libraries.
+
 Advanced Flat also:
 
 - Uses Typescript which adds type-safety into your code!
@@ -23,9 +25,6 @@ Advanced Flat also:
 - Organises code into functions and pipes instead of object oriented hierarchies
 
 > Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
-
-Flat is javascript (or even better with typescript), but with some principles, and rules applied.
-The result is flat, untangled code.
 
 Flat takes an fp (functional programming) over oo (object oriented) approach - so you won't see any classes or even prototype inheritance here. 
 Instead code is organised into functions and pipes.
