@@ -1,5 +1,7 @@
 # Pipable Functions
 
+> 🌶️  &nbsp; `pipe` is found in **The Prelude**
+
 Pipable functions are functions that can be used in `pipe`s.
 To be pipable they need to be Unary (accept 1 argument).
 They should take an input value (known as the subject), and produce an output value, without mutating the input value.
