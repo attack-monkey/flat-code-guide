@@ -30,7 +30,7 @@ const b = deRef(a)
 
 ```
 
-this will cause an error if uncommented - because `b` has dropped the methods.
+this will cause an error - because `b` has dropped the methods.
 
 ```javascript
 
