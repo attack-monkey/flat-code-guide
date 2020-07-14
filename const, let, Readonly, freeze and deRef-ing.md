@@ -74,7 +74,7 @@ In Flat this is done by dereferenceing an object when you assign it to another v
 
 > 🌶️ &nbsp; `deRef` is found in **The Prelude**
 
-```
+```typescript
 const obj3: MutCat = deRef(obj2) We have made obj3 mutable and deRef'd it, as to not mutate obj1 or obj2
 obj3.likesToScratch = false
 ```
