@@ -24,8 +24,10 @@ Flat is javascript (or even better with typescript), but with some principles, a
 The result is flat, untangled code.
 
 **For the best and safest experience:**
+
 - use Typescript which adds type-safety into your code!
 - Use **The Prelude**; a small set of utility functions that introduce powerful ways to organise your code and make it even safer. Many of Flat's principles don't require this or any other library, but Flat becomes a much richer experience with it. Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
+- This is known as **Advanced Flat**
 
 Flat takes an fp (functional programming) over oo (object oriented) approach - so you won't see any classes or even prototype inheritance here. 
 Instead code is organised into functions and pipes.
