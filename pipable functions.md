@@ -53,7 +53,7 @@ const logInDev: LogInDev = env => prefixMessage => numberToLog =>
 const env = 'dev'
 const logInDev_ = logInDev(env)
 
-pipe(100, add(10), add(20), logInDev_(`Here's my number`)) // Only logs in dev
+pipe(100, add(10), add(20), logInDev_(`Here's my number`)) // Here's my number: 130 (Only logs in dev)
 
 ```
 
