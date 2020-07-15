@@ -20,7 +20,7 @@ Advanced Flat also:
 
 - Uses Typescript which adds type-safety into your code!
 - :hot_pepper: &nbsp; Uses **The Prelude** and a minimal set of other utility libraries to...
-- Organises code into functions and pipes instead of object oriented hierarchies
+- Organise code into functions and pipes instead of object oriented hierarchies
 
 > Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
 
