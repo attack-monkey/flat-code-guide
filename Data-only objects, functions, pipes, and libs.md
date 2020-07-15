@@ -2,6 +2,10 @@
 
 In Flat, data-only objects are preferred over objects with both properties and methods.
 
+In addition to data-only objects; flat uses libs and meta-objects.
+We'll discuss libs below, and meta-objects in // TODO: Add link
+
+
 Here's an object with a property and method...
 
 ```javascript
