@@ -6,6 +6,8 @@ Conditionals are pipable functions that deal with ambiguous types and values.
 
 The Maybe lib provides the `none`, `some`, and `match` conditionals.
 
+## `some` and `none`
+
 By using `some` and `none` it's possible to create paths where in one the 'subject' has a value and 
 the other, it doesn't. In the `some` path the compiler knows that the subject has a value.
 In the `none` path the compiler treats the subject as undefined.
@@ -27,6 +29,10 @@ const c = pipe(
 
 ```
 
+## `match`
+
+### Literal matching
+
 The `match` conditional is a powerful pattern matching condtional.
 
 Firstly simple equality matches can be made...
@@ -42,6 +48,8 @@ const e = pipe(
 )
 
 ```
+
+### Partial Matching & Destructuring
 
 Secondly partial objects and arrays can be matched against an object / array.
 
@@ -77,6 +85,8 @@ is able to verify a pattern at runtime.
 
 Since the compiler already knows the type of the subject if a given path fires, it allows 
 for very type-safe coding.
+
+### Runtime Interfaces
 
 Special runtime interfaces can be used to match against in place of values...
 
