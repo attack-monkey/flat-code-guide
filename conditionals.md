@@ -29,7 +29,7 @@ const c = pipe(
 
 The `match` conditional is a powerful pattern matching condtional.
 
-Fistly simple equality matches can be made...
+Firstly simple equality matches can be made...
 
 ```typescript
 
