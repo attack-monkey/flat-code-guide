@@ -66,7 +66,7 @@ const person = {
 pipe(
   person,
   match({ name: first: 'Johnny' }, ({ name: { first: a }}) => `hello ${a}`),
-  otherwise(_ => `not johnny`)
+  match($unknown, _ => `not johnny`)
 )
 ```
 
