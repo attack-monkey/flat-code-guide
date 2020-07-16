@@ -23,3 +23,5 @@ Inside it has
 - A types folder, which usually also follows a one type per file setup. Only exportable types need to be here.
 
 So the Main module often often uses Main/functions/main.ts as the entry point of the app, not requiring the index.ts
+
+## [Next: Conditionals](https://github.com/attack-monkey/flat-code-guide/blob/master/Conditionals.md)
