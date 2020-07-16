@@ -211,3 +211,5 @@ Primitive Runtime Interfaces have a `type` property, but more complex ones have 
 In both `$odd` and `$even` the subject is piped into the test function and a boolean is returned which determines whether or not the subject matches.
 
 Note that the Runtime Interface object is coerced into the expected type should the path match.
+
+## [Next: Splitting code into programs with known inputs](https://github.com/attack-monkey/flat-code-guide/blob/master/Splitting%20code%20into%20programs%20with%20known%20inputs.md)
