@@ -177,3 +177,37 @@ $lte
 $gte
 
 In addition to literal matching and partial matching.
+
+## Roll your own Runtime Interfaces
+
+```typescript
+
+const $even =
+  {
+    runtimeInterface: true,
+    test: (a: number) => a % 2 === 0
+  } as unknown as number
+
+const $odd =
+  {
+    runtimeInterface: true,
+    test: (a: number) => a % 2 !== 0
+  } as unknown as number
+
+console.log(
+  pipe(
+    101,
+    match($even, a => `number is even`),
+    match($odd, a => `number is odd`)
+  )
+) // number is odd
+
+```
+A Runtime interface is an object with the property `runtimeInterface: true`.
+This tells the `match` function to treat the value as a Runtime Interface.
+
+Primitive Runtime Interfaces have a `type` property, but more complex ones have a `test` function that determines whether a match is being made.
+
+In both `$odd` and `$even` the subject is piped into the test function and a boolean is returned which determines whether or not the subject matches.
+
+Note that the Runtime Interface object is coerced into the expected type should the path match.
