@@ -18,12 +18,12 @@ At the end of a pipe, if the object being returned is a Done object, then it wil
 
 ```typescript
 
-let b: string
-b = 'cat'
+let a: string
+a = 'cat'
 
-const c = pipe(
-  b,
-  some(b => `it's ${b}`),
+const b = pipe(
+  a,
+  some(a => `it's ${a}`),
   none(_ => `it's nothing`)
 )
 
@@ -39,10 +39,10 @@ Firstly simple equality matches can be made...
 
 ```typescript
 
-const d = 'cat' as unknown
+const a = 'cat' as unknown
 
-const e = pipe(
-  d,
+const a = pipe(
+  a,
   match('cat', a => `hello kitty`),
   match('dog', a => `hello doggy`),
 )
@@ -55,7 +55,7 @@ Secondly partial objects and arrays can be matched against an object / array.
 
 ```typescript
 
-const f = {
+const a = {
   name: {
     first: 'johnny',
     last: 'bravo'
@@ -63,7 +63,7 @@ const f = {
 }
 
 pipe(
-  f,
+  a,
   match({ name: { first: 'johnny '} }, a => `matching on first name`)
 )
 
@@ -74,8 +74,8 @@ Which is particularly useful when used in combination with destructuring
 ```typescript
 
 pipe(
-  f,
-  match({ name: { first: 'johnny '} }, ({ name: { first: a }}) => `Hey it's ${a}`)
+  a,
+  match({ name: { first: 'johnny '} }, ({ name: { first: b }}) => `Hey it's ${b}`)
 )
 
 ```
@@ -93,8 +93,8 @@ Special runtime interfaces can be used to match against in place of values...
 ```typescript
 
 pipe(
-  f,
-  match({ name: { first: $string }}, ({ name: { first: a }}) => `${a} is a string`)
+  a,
+  match({ name: { first: $string }}, ({ name: { first: b }}) => `${b} is a string`)
 )
 
 ```
@@ -103,11 +103,11 @@ Runtime interfaces are powerful...
 
 ```typescript
 
-const g = [1, 2, 3]
+const a = [1, 2, 3]
 
 pipe(
-  g,
-  match($array($number), g => `${g} is an array of numbers`)
+  a,
+  match($array($number), a => `${a} is an array of numbers`)
 )
 
 ```
@@ -115,22 +115,22 @@ pipe(
 ```typescript
 
 pipe(
-  g,
-  match([1, $number, 3], ([_, a, __]) => `${a} is a number`)
+  a,
+  match([1, $number, 3], ([_, b, __]) => `${b} is a number`)
 )
 
 ```
 
 ```typescript
 
-const h = {
+const a = {
   a: [1, 2],
   b: [3, 3, 4],
   c: [1, 5, 99]
 }
 
 pipe(
-  h,
+  a,
   match($record($array($number)), a => `A record of arrays of strings - whoa`)
 )
 
@@ -138,10 +138,10 @@ pipe(
 
 ```typescript
 
-const i = 'cat' as unknown
+const a = 'cat' as unknown
 console.log(
   pipe(
-    i,
+    a,
     match($lt(100), a => `< 100`),
     match($gt(100), a => `> 100`),
     match(100, a => `its 100`),
@@ -153,10 +153,10 @@ console.log(
 
 ```typescript
 
-const j = 'cat' as string | number
+const a = 'cat' as string | number
 
 pipe(
-  j,
+  a,
   match($union([$string, $number]), a => `a is string | number`)
 )
 
