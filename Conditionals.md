@@ -266,3 +266,5 @@ const program1 = () => {
 program1()
 
 ```
+
+The beauty of 'always forward programming' is that the path assigns type-certainty to variables but only under a certain runtime condition. Should that condition be met, the path fires and scope is passed to program2 with that type-certainty. Program2 doesn't really care what calls it; it is simply a program waiting to be called. However, when it is called - it has type-certainty.
