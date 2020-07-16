@@ -1,6 +1,6 @@
 # Conditionals
 
-> :hot_pepper: &nbsp; 🧩 &nbsp; This document uses `pipe` from **The Prelude** and the **Maybe lib**
+> :hot_pepper: &nbsp; 🧩 &nbsp; This document uses `pipe` from **The Prelude** and introduces the **Maybe lib**
 
 Conditionals are pipable functions that deal with ambiguous types and values.
 
