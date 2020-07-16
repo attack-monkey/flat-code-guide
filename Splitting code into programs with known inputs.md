@@ -1,5 +1,8 @@
 ## Splitting code into programs with known inputs
 
+
+> :hot_pepper: &nbsp; 🧩 &nbsp; This document uses `pipe` from **The Prelude** and introduces the **Maybe lib**
+
 All the Maybe functions return a type of Maybe<A> where A is the type of the passed in subject.
 
 So if you do something like...
