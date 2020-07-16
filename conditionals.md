@@ -12,7 +12,7 @@ In the `none` path the compiler treats the subject as undefined.
 
 When using conditionals, only the first path to match will fire.
 Once a path has been matched, a special Done object is returned that informs any additional conditionals that a match has already been made.
-At the end of a pipe, if the objecct being returned is a Done object, then it will actually return the result from the matched path.
+At the end of a pipe, if the object being returned is a Done object, then it will actually return the result from the matched path.
 
 ```typescript
 
