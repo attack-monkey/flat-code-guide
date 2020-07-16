@@ -6,7 +6,7 @@ In place of imperative Control Flow, are the following declarative alternatives:
 
 - [Ternaries](https://github.com/attack-monkey/flat-code-guide/blob/master/Ternaries.md)
 - [Short Circuits](https://github.com/attack-monkey/flat-code-guide/blob/master/Short%20Circuits.md)
-- 🌶️  &nbsp; 🧩 &nbsp; Conditionals ( Utilising **The Prelude** + **Maybe Library** )
+- 🌶️  &nbsp; 🧩 &nbsp; [Conditionals](https://github.com/attack-monkey/flat-code-guide/blob/master/Conditionals.md) ( Utilising **The Prelude** + **Maybe Library** )
 - For loops, use recursion.
 
 So what's the difference between them and which should you use?
