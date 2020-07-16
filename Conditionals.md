@@ -164,17 +164,17 @@ pipe(
 
 Runtime interfaces include
 
-$string
-$number
-$boolean
-$array()
-$record()
-$union([])
-$unknown
-$lt
-$gt
-$lte
-$gte
+- `$string`
+- `$number`
+- `$boolean`
+- `$array()`
+- `$record()`
+- `$union([])`
+- `$unknown`
+- `$lt`
+- `$gt`
+- `$lte`
+- `$gte`
 
 In addition to literal matching and partial matching.
 
