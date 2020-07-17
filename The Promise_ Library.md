@@ -1,6 +1,6 @@
 # The Promise_ Library
 
-> 🌶️   🧩   This document uses `pipe` from **The Prelude** and introduces the Promise_ lib
+> 🌶️  &nbsp; 🧩   This document uses `pipe` from **The Prelude** and introduces the Promise_ lib
 
 The Promise_ Lib provides pipable equivalents of the Promise API
 
