@@ -68,3 +68,5 @@ pipe(
 )
 
 ```
+
+## [Next: Simple, Safe JSON](https://github.com/attack-monkey/flat-code-guide/blob/master/Simple%20Safe%20JSON.md)
