@@ -1,5 +1,7 @@
 # Simple, Safe JSON
 
+> 🌶️  &nbsp; 🧩   This document uses `compose` from **The Prelude** as well as functions from the Maybe Lib and Promise_ lib
+
 - Create an expected JSON type
 - Create a runtime interface representing the type
 - Use the fetch API + Promise_ Lib `then` in a pipe to make the fecth call and get the response.
