@@ -59,11 +59,14 @@ pipe(
 
 ```typescript
 
+// Parallel takes a tuple of generic values, which can each be a promise or not
 type A = [Promise<string>, Promise<string>]
+// It then unwraps the promises, while leaving non promises as is.
+// It then returns the new array wrapped in a promise.
 type B = Promise<[string, string]>
 pipe(
   [ waitCat, waitDog ] as A,
-  parallel as AtoB<A, B>, // parallel is equivalent to Promise.all - but has a type of (a: any) => any which means we need to annotate it
+  parallel as AtoB<A, B>,
   then(x => console.log(`${x} is of type [string, string]`))
 )
 
