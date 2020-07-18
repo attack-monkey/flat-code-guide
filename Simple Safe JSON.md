@@ -1,29 +1,22 @@
 # Simple, Safe JSON
 
-> 🌶️  &nbsp; 🧩   This document uses `compose` from **The Prelude** as well as functions from the Maybe Lib and Promise_ lib
+> 🌶️  &nbsp; 🧩   This document uses `compose` from **The Prelude** as well as functions from the Maybe Lib and Promise_ Lib
 
-- Create an expected JSON type
-- Create a runtime interface representing the type
-- Use the fetch API + Promise_ Lib `then` in a pipe to make the fecth call and get the response.
-- Use `compose`, which is like `pipe` but returns a function that accepts the subject.
-- Use `match` from the Maybe Lib to match against the runtime interface. This will automatically assign the `json` the corresponding type.
-- Using `json: ExpectedJson` enforces that the type that the runtime interface produces is compatible with the expected json type.
-- Use a `match($unknown...` to catch requests that don't meet the expected JSON
 
 ```typescript
 
 type ExpectedJson = {
-  "userId": number,
-  "id": number,
-  "title": string,
-  "completed": boolean
+  userId: number,
+  id: number,
+  title: string,
+  completed: boolean
 }
 
 const runtimeInterfaceJson = {
-  "userId": $number,
-  "id": $number,
-  "title": $string,
-  "completed": $boolean
+  userId: $number,
+  id: $number,
+  title: $string,
+  completed: $boolean
 }
 
 pipe(
