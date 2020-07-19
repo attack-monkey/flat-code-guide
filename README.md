@@ -15,6 +15,7 @@ Flat emphasizes the simplification of logic in code by:
 - Reducing the number of returns from functions
 
 Simple Flat is really a set of principles, and doesn't require any additional libraries.
+Reading this Readme and the chapter on Control Flow, will help you write much cleaner code.
 
 Advanced Flat also:
 
@@ -24,8 +25,7 @@ Advanced Flat also:
 
 > Anytime you see a mention to **The Prelude** you'll see a :hot_pepper: &nbsp; at the start of the line. If there is a mention to another library, you'll see a 🧩.
 
-Flat takes an fp (functional programming) over oo (object oriented) approach - so you won't see any classes or even prototype inheritance here. 
-Instead code is organised into functions and pipes.
+Flat takes an fp (functional programming) over oo (object oriented) approach - so there is an emphasis on organising code into functions and pipes rather than oo based hierarchies.
 
 While Flat takes on fp principles, it doesn't dive anywhere near as deep. 
 Flat is primarily concerned with making flat untangled, well organised and safe code.
@@ -174,11 +174,16 @@ There are a lot of constructs in javascript, which are deemed unsafe in flat. Th
 - `for` - causes mutation and multiple returns
 - `var` - Is a higher scoped varient of `let` which is no longer needed.
 - `while` - Causes mutation and multiple returns
-- `class` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
-- `new` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
-- `this` - Is an oo construct that is just not as modular, flexible, or pure as functions and pipes
 
-> If your project already has banned keywords - well unless you refactor, theres not much you can do, but don't introduce more.
+> If your project already has unsafe keywords - well unless you refactor, theres not much you can do, but think first before adding more.
+
+## Words that probably indicate that you are thinking in an oo way rather than flat...
+
+- `class`
+- `new`
+- **`this`**
+
+
 
 ## [Next: Control-Flow](https://github.com/attack-monkey/flat-code-guide/blob/master/Control-Flow.md)
 
