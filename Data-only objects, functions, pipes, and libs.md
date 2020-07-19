@@ -22,7 +22,7 @@ This is perfectly fine, but it means that the `says` method is really bound to t
 
 Code in Flat is organised into functions, libs, and pipes, rather than methods and classes.
 
-So instead, in flat - the `says` method becomes a function that accepts any object that has a `value` property of type string.
+So instead, the `says` method becomes a function that accepts any object that has a `value` property of type string.
 
 **function**
 
