@@ -22,6 +22,8 @@ Inside it has
 - A functions folder with a file per function in the library.
 - A types folder, which usually also follows a one type per file setup. Only exportable types need to be here.
 
+> There may be a need to include other folders too. This is all pretty flexible. The main thing is to try and keep everything as flat modules.
+
 So the Main module often often uses Main/functions/main.ts as the entry point of the app, not requiring the index.ts
 
 ## [Next: Conditionals](https://github.com/attack-monkey/flat-code-guide/blob/master/Conditionals.md)
