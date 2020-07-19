@@ -41,7 +41,7 @@ Firstly simple equality matches can be made...
 
 const a = 'cat' as unknown
 
-const a = pipe(
+const b = pipe(
   a,
   match('cat', a => `hello kitty`),
   match('dog', a => `hello doggy`),
