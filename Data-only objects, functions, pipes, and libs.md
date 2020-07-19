@@ -1,7 +1,7 @@
 # Data-only objects, functions, pipes, and libs
 
 In Flat, data-only objects are preferred over objects with both properties and methods.
-This is not a hard and fast rule, since objects that contain functions are an integral part to flat programming too - but this chapter explores why
+This is not a hard and fast rule, since objects that contain functions are an integral part to flat programming too - but this chapter shows why data-only objects are preferred.
 
 Here's an object with a property and method...
 
