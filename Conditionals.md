@@ -176,8 +176,6 @@ Runtime interfaces include
 - `$lte`
 - `$gte`
 
-In addition to literal matching and partial matching.
-
 ## Roll your own Runtime Interfaces
 
 ```typescript
