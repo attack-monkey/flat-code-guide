@@ -1,10 +1,7 @@
 # Data-only objects, functions, pipes, and libs
 
 In Flat, data-only objects are preferred over objects with both properties and methods.
-
-In addition to data-only objects; flat uses libs and meta-objects.
-We'll discuss libs below, and meta-objects in // TODO: Add link
-
+This is not a hard and fast rule, since objects that contain functions are an integral part to flat programming too - but this chapter explores why
 
 Here's an object with a property and method...
 
@@ -21,28 +18,7 @@ a.says() cat says meow
 
 ```
 
-One reason for using data-only objects, is that the deRef function which is used to copy objects while dereferencing the original objects
-properties, also drops any associated methods.
-
-> 🌶️  &nbsp; `deRef` is found in **The Prelude**
-
-The following creates a data-only clone of `a`
-
-```javascript
-
-const b = deRef(a)
-
-```
-
-this will cause an error - because `b` has dropped the methods.
-
-```javascript
-
-b.says()
-
-```
-
-The other reason for using data-only objects is that code in Flat is organised into functions, libs, and pipes, rather than methods and classes.
+The reason for prefering data-only objects is that code in Flat is organised into functions, libs, and pipes, rather than methods and classes.
 
 **function**
 
