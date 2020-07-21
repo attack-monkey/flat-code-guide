@@ -81,3 +81,28 @@ pipe(
 )
 
 ```
+
+**Example 2 - Emitter**
+
+An Emitter is just a Record that holds functions
+When emit is called - then each function is called with the given value
+
+```typescript
+
+type Emitter<A> = Record<string, (a: A) => any>
+  
+const emit = <A>(e: Emitter<A>) =>
+  (value: A) =>
+    Object.keys(e).forEach(key => e[key](value))
+
+const a: Emitter<string> = {}
+
+a.key1 = x => console.log(x + '???')
+a.key2 = x => console.log(x + '!!!')
+
+pipe('hello', emit(a))
+
+// hello ???
+// hello !!!
+
+```
