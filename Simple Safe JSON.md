@@ -31,3 +31,5 @@ pipe(
 )
 
 ```
+
+## [Next: Receiver Functions & more Async](https://github.com/attack-monkey/flat-code-guide/blob/master/Receiver%20Functions.md)
