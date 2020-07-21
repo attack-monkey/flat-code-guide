@@ -1,4 +1,4 @@
-# Receiver Functions
+# Receiver Functions & more async
 
 A Receiver Function takes an object known as the 'receiver' and a value to apply to the receiver.
 The function mutates the receiver using the value.
