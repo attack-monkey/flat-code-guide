@@ -68,7 +68,7 @@ Here are some basic checks...
 ```javascript
 
 cat               // truthy check
-existy(cat)       // checks that the input is neither null nor undefined - SEE SHORT CIRCUITS.md for info on existy
+isSome(cat)       // checks that the input is neither null nor undefined.
 cat === 'charlie' // value check
 ['charlie', 'doug'].includes(cat) // Checks that cat is either charlie or doug
 
@@ -99,8 +99,6 @@ mustBeApple(fruit) // throws exception
 
 ```
 
-If you're using Typescript or another javascript compiler with static type support, then most checks and guards can be avoided in favour of compile time type checking.
-
-In saying that - there are times where you will not know a type at run time and the above dynamic type checking is still very important.
+If you're using Typescript or another javascript compiler with static type support, then most checks and guards can be avoided in favour of compile time type checking. For better control over unknowns at compile time check out Conditionals.
 
 // TODO: Next --> Runtime Interfaces and Contracts
