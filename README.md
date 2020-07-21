@@ -58,8 +58,9 @@ Rarely use `let`
 Mutating variables can lead to unwanted side effects and introduce hard to trace bugs.  
 Instead use immutable operations like the ones above, that generate a new state rather than mutating the existing state.
 
-### Reducing Nested Logic
+> Caveat: If writing a high compute piece of code that requires lots of recursion or traversing structures to create new immutable structures - then looping and mutation may be worth the loss of purity. Flat explains ways of handling mutation safely for these cases.
 
+### Reducing Nested Logic
 
 Nesting logic is when you put a logic block inside of another logic block. For example an `if` inisde another `if` or a `switch` inside an `if` etc.
 Each time you nest some logic, you are tangling code that little bit more.  
@@ -110,6 +111,8 @@ const String_ = {
 }
 
 ```
+
+An oo way to think about the above is that libs are classes with static methods. 
 
 Programs are built by using `pipe` to pass a value through a series of functions.
 
@@ -171,11 +174,13 @@ There are a lot of constructs in javascript, which are deemed unsafe in flat. Th
 
 - `if` - encourages mutation and multiple returns
 - `switch` - encourages mutation and multiple returns
-- `for` - causes mutation and multiple returns
 - `var` - Is a higher scoped varient of `let` which is no longer needed.
-- `while` - Causes mutation and multiple returns
 
 > If your project already has unsafe keywords - well unless you refactor, theres not much you can do, but think first before adding more.
+
+## Loops vs Recursion
+
+Loop constructs like `for` and `while` tend to be faster than recursion and are preferred in high compute situations. However they come at the cost of purity since they mutate variables in order to run a loop. For most cases recursion provides a pure way of achieving the same result with a tiny performance hit.
 
 ## Words that probably indicate that you are thinking in an oo way rather than flat...
 
@@ -183,7 +188,7 @@ There are a lot of constructs in javascript, which are deemed unsafe in flat. Th
 - `new`
 - **`this`**
 
-
+In most Flat code you won't need classes, prototypes or any other oo constructs. You will however most likely still need to use the `new` keyword when using other libraries.
 
 ## [Next: Control-Flow](https://github.com/attack-monkey/flat-code-guide/blob/master/Control-Flow.md)
 
