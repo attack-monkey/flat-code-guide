@@ -75,7 +75,7 @@ In Flat this is done by dereferenceing an object when you assign it to another v
 > 🌶️ &nbsp; `deRef` is found in **The Prelude**
 
 ```typescript
-const obj3: MutCat = deRef(obj2) We have made obj3 mutable and deRef'd it, as to not mutate obj1 or obj2
+const obj3: MutCat = deRef(obj2) // We have made obj3 mutable and deRef'd it, as to not mutate obj1 or obj2
 obj3.likesToScratch = false
 ```
 
@@ -90,7 +90,7 @@ For example
 const obj4: MutCat = obj1
 
 obj4.likesToScratch = false
-console.log(obj1.likesToScratch) oh no obj4 mutated obj1
+console.log(obj1.likesToScratch) // oh no obj4 mutated obj1
 ```
 
 It is almost always better to simply make new versions of an object than mutating an object.
