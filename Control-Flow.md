@@ -1,13 +1,12 @@
 # Control Flow
 
-JS / TS have many ways to control the flow of a program. In readme.md we explained why `if`, `switch`, and imperative loops like `for` are poor ways to control flow and in flat have been designated as Unsafe keywords.
+JS / TS have many ways to control the flow of a program. In readme.md we explained why `if` and `switch` are less pure ways to control flow and in flat have been designated as Unsafe keywords.
 
 In place of imperative Control Flow, are the following declarative alternatives:
 
 - [Ternaries](https://github.com/attack-monkey/flat-code-guide/blob/master/Ternaries.md)
 - [Short Circuits](https://github.com/attack-monkey/flat-code-guide/blob/master/Short%20Circuits.md)
 - 🌶️  &nbsp; 🧩 &nbsp; [Conditionals](https://github.com/attack-monkey/flat-code-guide/blob/master/Conditionals.md) ( Utilising **The Prelude** + **Maybe Library** )
-- For loops, use recursion.
 
 So what's the difference between them and which should you use?
 
@@ -69,5 +68,9 @@ pipe(
   match($unknown, _ => `not johnny`)
 )
 ```
+
+## Loops
+
+For loops, recursion is 'pure' but takes a performance hit (not noticeable in most situations). Loops like `for` and `while` are faster, but work by mutating an iterable counter - so they are less 'pure'.
 
 ## [Next: `const`, `let`, `freeze`, and `deRef`-ing](https://github.com/attack-monkey/flat-code-guide/blob/master/const%2C%20let%2C%20Readonly%2C%20freeze%20and%20deRef-ing.md)
