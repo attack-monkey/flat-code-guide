@@ -72,6 +72,19 @@ pipe(40, push(capacitor))
 pipe(50, push(capacitor))
 pipe(60, push(capacitor))
 
+/*
+***
+10
+20
+30
+***
+***
+40
+50
+60
+***
+*/
+
 // Or using an arrayMap...
 
 const arrayMap = <A, B>(f: (a: A) => B) => (a: A[]) => a.map(f)
@@ -79,6 +92,19 @@ const arrayMap = <A, B>(f: (a: A) => B) => (a: A[]) => a.map(f)
 pipe(
   [10, 20, 30, 40, 50, 60], arrayMap(push(capacitor))
 )
+
+/*
+***
+10
+20
+30
+***
+***
+40
+50
+60
+***
+*/
 
 ```
 
