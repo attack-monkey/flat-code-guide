@@ -104,7 +104,7 @@ const obj5: Cat = { ...obj1, likesToScratch: false }
 
 ```
 
-And while freeze is great at locking things down, it can be overkill - and is by simply following immutable patterns almost all
+And while freeze is great at locking things down, it can be overkill - and by simply following immutable patterns almost all
 issues just go away.
 
 So `const`, `freeze`, and `deRef` are all extremely important tools in safe fast typescript but there is no substitute for immutable patterns!
