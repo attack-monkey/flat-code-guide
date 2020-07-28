@@ -182,7 +182,7 @@ A given function can be used by any value that conforms to function's call signa
 
 Loop constructs like `for` and `while` tend to be faster than recursion and are preferred in high compute situations. However they come at the cost of purity since they mutate variables in order to run a loop. For most cases recursion provides a pure way of achieving the same result with a tiny performance hit.
 
-## Words that probably indicate that you are thinking in an oo way rather than flat...
+## Words that probably indicate that you are thinking in an oo way rather than flat / functional ...
 
 - `class`
 - `new`
