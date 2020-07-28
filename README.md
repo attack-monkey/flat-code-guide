@@ -170,7 +170,7 @@ A given function can be used by any value that conforms to function's call signa
  
 ## Unsafe keywords
 
-There are a lot of constructs in javascript, which are deemed unsafe in flat. The following keywords are considered unsafe because they work against the intention of flat...
+:warning: The following keywords are considered unsafe because they work against the intention of flat... use with caution!
 
 - `if` - encourages mutation and multiple returns
 - `switch` - encourages mutation and multiple returns
