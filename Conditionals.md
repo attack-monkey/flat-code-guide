@@ -131,7 +131,7 @@ const a = {
 
 pipe(
   a,
-  match($record($array($number)), a => `A record of arrays of strings - whoa`)
+  match($record($array($number)), a => `A record of arrays of numbers - whoa`)
 )
 
 ```
