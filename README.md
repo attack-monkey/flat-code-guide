@@ -1,3 +1,8 @@
+
+# CAUTION: https://github.com/attack-monkey/Lean-Functional-Typescript replaces this guide.
+
+> That's not to say that there are not some useful concepts covered in FLAT.
+
 ```
  ___________                                      
 |            |              .'.       `````|````` 
